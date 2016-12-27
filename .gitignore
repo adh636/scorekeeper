@@ -3,5 +3,5 @@ node_modules/*
 typings/*
 .idea/*
 coverage/*
-**/*.js
-**/*.map
+app/**/*.js
+app/**/*.map
