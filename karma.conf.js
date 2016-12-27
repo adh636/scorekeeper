@@ -14,7 +14,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'app/spec/*.js'
+            'app/**/*.spec.js'
         ],
 
 
@@ -26,7 +26,7 @@ module.exports = function(config) {
             configFile: 'systemjs.config.js',
 
             serveFiles: [
-                'app/src/**/*.js',
+                'app/**/*.js',
                 'node_modules/**/*.js'
             ],
 
@@ -44,7 +44,7 @@ module.exports = function(config) {
         // preprocess matching files before serving them to the browser
         // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
         preprocessors: {
-            'src/**/*.js': ['coverage']
+            '**/*.js': ['coverage']
         },
 
         // test results reporter to use
