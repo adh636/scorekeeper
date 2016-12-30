@@ -1,4 +1,22 @@
-<button (click)="deleteResults()">DELETE RESULTS</button>
-<div *ngFor="let result of results">
-  <div>{{displayText(result)}}</div>
+<div class="container">
+  <h3>RESULTS</h3>
+  <table>
+    <tr>
+      <th>Game</th>
+      <th>Player One</th>
+      <th>Player Two</th>
+      <th>Winner</th>
+    </tr>
+  </table>
+  <div style="overflow-y:auto; height:200px;">
+    <table>
+      <tr *ngFor="let result of results">
+            <td>{{result.game}}</td>
+            <td>{{result.playerOne}}</td>
+            <td>{{result.playerTwo}}</td>
+            <td>{{result.winner}}</td>
+      </tr>
+    </table>
+  </div>
+  <button type="button" class="btn btn-danger" (click)="deleteResults()">DELETE RESULTS</button>
 </div>

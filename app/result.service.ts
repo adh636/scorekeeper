@@ -19,5 +19,5 @@ export class ResultService {
 
   update(): void {
     if (this.resultsObserver) this.resultsObserver.next(true);
-  }
+  }f
 }

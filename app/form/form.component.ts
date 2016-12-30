@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import {Model} from "../model";
 import {SKRestService} from "../skrest.service";
-import {ResultsComponent} from "../results/results.component";
 import {ResultService} from "../result.service";
 
 @Component({
   moduleId: module.id,
   selector: 'sk-form',
-  templateUrl: 'form.component.html'
+  templateUrl: 'form.component.html',
+  styleUrls: [ "form.component.css" ]
 })
 
 export class FormComponent {
@@ -19,13 +19,8 @@ export class FormComponent {
 
   }
 
-
-
-  // get diagnostic() {
-  //   return JSON.stringify(this.model);
-  // }
-
   submitResults(): void {
+    if (this.modelNotFull()) return;
     let postData: any = this.modelToJSON();
     this.skRestService.submitResults(postData).subscribe();
     this.resultService.update();
@@ -38,5 +33,10 @@ export class FormComponent {
       playerTwo: this.model.players[1],
       winner: this.model.winner
     };
+  }
+
+  modelNotFull(): boolean {
+    return this.model.game === "" || this.model.players[0] === ""
+      || this.model.players[1] === "" || this.model.winner === "";
   }
 }

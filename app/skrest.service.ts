@@ -21,9 +21,6 @@ export class SKRestService {
 
   submitResults(postData: any): Observable<any> {
     let postUrl: string = this.restUrl + "/api/sk";
-    console.log(postUrl);
-    console.log(postData);
-    console.log();
     return this.http.post(postUrl, postData, this.requestOptions);
   }
 

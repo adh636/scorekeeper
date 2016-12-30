@@ -31,15 +31,6 @@ export class ResultsComponent {
     this.skRestService.getResults().subscribe((results) => this.results = results);
   }
 
-  getResults(): void {
-    this.results.forEach((result: any) => {
-        console.log(result.game);
-        console.log(result.playerOne);
-        console.log(result.playerTwo);
-        console.log(result.winner);
-    });
-  }
-
   deleteResults(): void {
     this.skRestService.deleteResults().subscribe();
     // setTimeout(() => {
@@ -50,6 +41,4 @@ export class ResultsComponent {
   displayText(result: any): string {
     return result.game + " " + result.playerOne + " " + result.playerTwo + " " + result.winner;
   }
-
-
 }
