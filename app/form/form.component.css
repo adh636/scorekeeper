@@ -5,3 +5,11 @@
 .disabled-button:hover {
   cursor: not-allowed;
 }
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #4CAF50;
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #d9534f;
+}

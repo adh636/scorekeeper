@@ -14,16 +14,12 @@ export class ResultsComponent {
 
   constructor(private skRestService: SKRestService, private resultService: ResultService) {}
 
-  // get diagnostic() {
-  //   return JSON.stringify(this.model);
-  // }
-
   ngOnInit(): void {
     this.updateResults();
     this.resultService.onUpdate().subscribe(() => {
-      // setTimeout(() => {
+      setTimeout(() => {
         this.updateResults();
-      // }, 500);
+      }, 300);
     });
   }
 
@@ -33,12 +29,6 @@ export class ResultsComponent {
 
   deleteResults(): void {
     this.skRestService.deleteResults().subscribe();
-    // setTimeout(() => {
-      this.resultService.update();
-    // }, 500);
-  }
-
-  displayText(result: any): string {
-    return result.game + " " + result.playerOne + " " + result.playerTwo + " " + result.winner;
+    this.resultService.update();
   }
 }
