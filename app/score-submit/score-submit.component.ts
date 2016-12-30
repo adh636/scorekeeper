@@ -1,9 +1,14 @@
 import {Component} from "@angular/core";
 
 @Component({
+  moduleId: module.id,
   selector: "sk-score-submit",
-  templateUrl: "app/score-submit/score-submit.component.html",
-  styleUrls: ["app/score-submit/score-submit.component.css"]
+  templateUrl: "score-submit.component.html",
+  styleUrls: ["score-submit.component.css"]
 })
 
-export class ScoreSubmitComponent {}
+export class ScoreSubmitComponent {
+  constructor() {
+
+  }
+}
