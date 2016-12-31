@@ -1,10 +1,10 @@
-.testclass {
+:host {
+  font-family: 'Merriweather', serif;
+}
+
+.scrollable {
   margin-top: 1vh;
   height: 89vh;
   overflow-y: auto;
   z-index: 1;
-}
-
-:host {
-  font-family: 'Merriweather', serif;
 }

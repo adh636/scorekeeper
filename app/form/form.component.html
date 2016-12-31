@@ -1,17 +1,11 @@
 <div class="container">
   <md-card class="app-input-section">
-    <md-input placeholder="Game"
-              [(ngModel)]="model.game"></md-input>
-    <md-input placeholder="Player One Name"
-              [(ngModel)]="model.players[0]">
-    </md-input>
-    <md-input placeholder="Player Two Name"
-              [(ngModel)]="model.players[1]">
-    </md-input>
-    <md-input placeholder="Winner"
-              [(ngModel)]="model.winner">
-    </md-input>
-    <button md-raised-button [class.disabled-button]="modelNotFull()"
-            class="submit-button" (click)="submitResults()">Submit</button>
+    <h3>new score</h3>
+    <md-input placeholder="game" [(ngModel)]="model.game"></md-input>
+    <md-input placeholder="player one name" [(ngModel)]="model.players[0]"></md-input>
+    <md-input placeholder="player two name" [(ngModel)]="model.players[1]"></md-input>
+    <md-input placeholder="winner" [(ngModel)]="model.winner"></md-input>
+    <button md-raised-button class="flex-right" [class.disabled-button]="modelNotFull()"
+            (click)="submitResults()">submit</button>
   </md-card>
 </div>

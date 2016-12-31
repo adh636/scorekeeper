@@ -1,6 +1,28 @@
+.app-results {
+  font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.results {
+  overflow-y: auto;
+  height: 175px;
+}
+
+.flex-right {
+  margin-left: auto;
+}
+
+button {
+  margin-top: 10px;
+  background: #ffd1cc;
+}
+
 table {
   border-collapse: collapse;
   width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 table, th, td {
@@ -10,28 +32,27 @@ table, th, td {
 th, td {
   padding: 15px;
   text-align: left;
-}
-
-tr:nth-child(even) {background-color: #f2f2f2}
-
-th {
-  background-color: #4CAF50;
-  color: white;
-}
-
-tr:hover {
-  background-color: #f5d7cd
-}
-
-th, td {
+  width: 25%;
   border-bottom: 1px solid #ddd;
 }
 
-button {
-  margin-top: 10px;
+
+th {
+  background-color: white;
 }
 
-.results {
-  overflow-y: auto;
-  height: 175px;
+tr:hover {
+  background-color: #ffd1cc
 }
+
+tr {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+td {
+
+  text-overflow: ellipsis;
+}
+
+/*tr:nth-child(even) {background-color: #f2f2f2}*/

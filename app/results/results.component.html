@@ -1,11 +1,12 @@
 <div class="container">
-  <h3>RESULTS</h3>
+  <md-card class="app-results">
+  <h3>results</h3>
   <table>
     <tr>
-      <th>Game</th>
-      <th>Player One</th>
-      <th>Player Two</th>
-      <th>Winner</th>
+      <th>game</th>
+      <th>player one</th>
+      <th>player two</th>
+      <th>winner</th>
     </tr>
   </table>
   <div class="results">
@@ -18,9 +19,6 @@
       </tr>
     </table>
   </div>
-  <button type="button" class="btn btn-danger" (click)="deleteResults()">DELETE RESULTS</button>
+  <button md-raised-button class="flex-right" (click)="deleteResults()">delete all</button>
+  </md-card>
 </div>
-
-<!--├── UNMET PEER DEPENDENCY angular@>=1.3 <1.6-->
-<!--├── UNMET PEER DEPENDENCY angular-animate@>=1.3 <1.6-->
-<!--├── UNMET PEER DEPENDENCY angular-aria@>=1.3 <1.6-->

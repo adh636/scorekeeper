@@ -2,9 +2,24 @@
   font-family: 'Merriweather', serif;
 }
 
+.app-input-section {
+  margin-top: 10px;
+  font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-right {
+  margin-left: auto;
+}
+
 .disabled-button {
   color: darkgray;
-  background: gray;
+  background: #f1f1f1;
 }
 
 .disabled-button:hover {
@@ -14,17 +29,4 @@
 md-input {
   font-family: 'Merriweather', serif;
   margin-bottom: 5px;
-}
-
-.app-input-section {
-  font-family: 'Merriweather', serif;
-  display: flex;
-  flex-direction: column;
-}
-
-.button {
-  margin-top: 5px;
-  width: 100px;
-  color: darkgray;
-  background: white;
 }

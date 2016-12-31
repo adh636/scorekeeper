@@ -11,12 +11,11 @@ import {ResultService} from "../result.service";
 })
 
 export class FormComponent {
-  games: string[] = ['Ping Pong', 'Pool', 'Darts'];
-  model = new Model("", ["", ""], "");
+  model: Model;
 
   constructor(private skRestService: SKRestService,
               private resultService: ResultService) {
-
+    this.model = new Model("", ["", ""], "");
   }
 
   submitResults(): void {
