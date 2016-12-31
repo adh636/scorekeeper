@@ -1,15 +1,30 @@
+:host {
+  font-family: 'Merriweather', serif;
+}
+
 .disabled-button {
   color: darkgray;
+  background: gray;
 }
 
 .disabled-button:hover {
   cursor: not-allowed;
 }
 
-.ng-valid[required], .ng-valid.required  {
-  border-left: 5px solid #4CAF50;
+md-input {
+  font-family: 'Merriweather', serif;
+  margin-bottom: 5px;
 }
 
-.ng-invalid:not(form)  {
-  border-left: 5px solid #d9534f;
+.app-input-section {
+  font-family: 'Merriweather', serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  margin-top: 5px;
+  width: 100px;
+  color: darkgray;
+  background: white;
 }

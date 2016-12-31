@@ -1,35 +1,17 @@
 <div class="container">
-  <form>
-
-    <div class="form-group">
-      <label for="power">Game</label>
-      <select class="form-control" id="power" required
-              [(ngModel)]="model.game" name="game">
-        <option *ngFor="let game of games" [value]="game">{{game}}</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="player-one">Player One</label>
-      <input type="text" class="form-control" id="player-one" required
-             [(ngModel)]="model.players[0]" name="playerTwo" #name="ngModel">
-    </div>
-
-    <div class="form-group">
-      <label for="player-two">Player Two</label>
-      <input type="text" class="form-control" id="player-two" required
-             [(ngModel)]="model.players[1]" name="playerOne">
-    </div>
-
-    <div class="form-group">
-      <label for="winner">Winner</label>
-      <select class="form-control" id="winner" required
-              [(ngModel)]="model.winner" name="winner">
-        <option *ngFor="let player of model.players"
-                [value]="player">{{player}}</option>
-      </select>
-    </div>
-
-    <button type="submit" class="btn btn-default" [class.disabled-button]="modelNotFull()"  (click)="submitResults()">Submit</button>
-  </form>
+  <md-card class="app-input-section">
+    <md-input placeholder="Game"
+              [(ngModel)]="model.game"></md-input>
+    <md-input placeholder="Player One Name"
+              [(ngModel)]="model.players[0]">
+    </md-input>
+    <md-input placeholder="Player Two Name"
+              [(ngModel)]="model.players[1]">
+    </md-input>
+    <md-input placeholder="Winner"
+              [(ngModel)]="model.winner">
+    </md-input>
+    <button md-raised-button [class.disabled-button]="modelNotFull()"
+            class="submit-button" (click)="submitResults()">Submit</button>
+  </md-card>
 </div>

@@ -10,6 +10,6 @@ export class HeaderComponent {
   appName: string;
 
   constructor() {
-    this.appName = "ScoreKeeper";
+    this.appName = "scorekeeper";
   }
 }

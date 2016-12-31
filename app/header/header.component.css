@@ -1,0 +1,10 @@
+:host {
+  font-family: 'Merriweather', serif;
+  height: 10vh;
+  width: 100%;
+  z-index: 2;
+}
+
+.container {
+  box-shadow: 0 4px 2px -2px gray;
+}

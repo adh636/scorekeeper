@@ -7,12 +7,12 @@
   var map = {
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
+    '@angular/material':          'node_modules/@angular/material/bundles/material.umd.js',
     'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs',
-    'typescript': 'node_modules/typescript/lib/typescript.js',
-    'systemjs': 'node_modules/systemjs/dist/system.js',
-    'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js'
-
+    'typescript':                 'node_modules/typescript/lib/typescript.js',
+    'systemjs':                   'node_modules/systemjs/dist/system.js',
+    'system-polyfills':           'node_modules/systemjs/dist/system-polyfills.js'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {

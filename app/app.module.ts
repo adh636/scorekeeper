@@ -10,9 +10,10 @@ import {FormComponent} from "./form/form.component";
 import {SKRestService} from "./skrest.service";
 import {ResultsComponent} from "./results/results.component";
 import {ResultService} from "./result.service";
+import {MaterialModule} from "@angular/material";
 
 @NgModule({
-    imports: [ BrowserModule, FormsModule, HttpModule, JsonpModule ],
+    imports: [ MaterialModule.forRoot(), BrowserModule, FormsModule, HttpModule, JsonpModule ],
     declarations: [ AppComponent, HeaderComponent, ScoreSubmitComponent,
       FormComponent, ResultsComponent ],
     providers: [ SKRestService, ResultService ],
