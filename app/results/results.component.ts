@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {SKRestService} from "../skrest.service";
 import {ResultService} from "../result.service";
 
@@ -19,7 +19,7 @@ export class ResultsComponent {
     this.resultService.onUpdate().subscribe(() => {
       setTimeout(() => {
         this.updateResults();
-      }, 300);
+      }, 500);
     });
   }
 

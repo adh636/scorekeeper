@@ -20,17 +20,17 @@ export class SKRestService {
   }
 
   submitResults(postData: any): Observable<any> {
-    let postUrl: string = this.restUrl + "/api/scores";
+    let postUrl: string = this.restUrl + "/api/game";
     return this.http.post(postUrl, postData, this.requestOptions);
   }
 
   getResults(): Observable<any> {
-    let postUrl: string = this.restUrl + "/api/scores";
+    let postUrl: string = this.restUrl + "/api/game";
     return this.http.get(postUrl).map((response: Response) => response.json());
   }
 
   deleteResults(): Observable<any> {
-    let postUrl: string = this.restUrl + "/api/scores/5~";
+    let postUrl: string = this.restUrl + "/api/game/5~";
     return this.http.delete(postUrl);
   }
 }
